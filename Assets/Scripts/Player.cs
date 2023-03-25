@@ -9,12 +9,16 @@ public class Player : MonoBehaviour
 
     public float TurnSmootTime = 0f;
     float TurnSmoothVelocity;
-    
+
 
     public Transform cam;
 
+    public void Update()
+    {
+        Camera();
+    }
 
-    private void Update()
+    private void Camera()
     {
         //input axis
         float horizontal = Input.GetAxisRaw("Horizontal");
