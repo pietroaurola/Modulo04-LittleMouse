@@ -21,47 +21,26 @@ public class Player : MonoBehaviour
 
 
 
-    public GameObject Object;
-    public Transform PlayerTransform;
-    public bool Box = false;
 
 
     
-    public bool Jump = false; //MI SERVE IL TRU E FALSE PER PROCCARE LA ROTAZIONE DEL PG DURANTE IL SALTO
-    private Vector3 playerVelocity;
-    public float jumpHeight = 10f;
-    public float gravityValue = -9.81f;
+    //public bool Jump = false; //MI SERVE IL TRU E FALSE PER PROCCARE LA ROTAZIONE DEL PG DURANTE IL SALTO
+    //private Vector3 playerVelocity;
+    //public float jumpHeight = 10f;
+    //public float gravityValue = -9.81f;
     
     public void Update()
     {
         CameraMove();
         Run();
-        
-        if(Input.GetButtonDown("Fire1") && Box == true)
-        {
-            Object.transform.SetParent(PlayerTransform); //RICORDATI DI FARE IL LOCK DELLA ROTAZIONE DEL PLAYER QUANDO PRENDE LA BOX
-            
-        }
-        if (Input.GetButtonUp("Fire1") )
-        {
-            PlayerTransform.DetachChildren();
-            Box = false;
-        }
 
-
-        //if (Input.GetButtonDown("Fire2"))
+        //if (Input.GetButtonDown("Jump"))
         //{
+        //    playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
         //    Debug.Log("ssALTA");
-        //    GetComponent<Rigidbody>().AddForce(Vector3.up * 500);
         //}
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
-            Debug.Log("ssALTA");
-        }
-
-        playerVelocity.y += gravityValue * Time.deltaTime;
+        //playerVelocity.y += gravityValue * Time.deltaTime;
     }
 
     private void CameraMove()
@@ -131,17 +110,4 @@ public class Player : MonoBehaviour
             }
         }
     }
-   
-
-    //trascinare oggetti
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("Box"))
-        {
-            Box = true;
-        }
-    }
-
-
-
 }
