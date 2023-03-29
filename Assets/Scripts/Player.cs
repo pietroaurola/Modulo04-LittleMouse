@@ -17,7 +17,6 @@ public class Player : MonoBehaviour
 
     public Transform cam;
 
-    public float forceMagnitude;
 
 
 
