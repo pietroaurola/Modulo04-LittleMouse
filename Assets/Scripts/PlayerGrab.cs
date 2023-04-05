@@ -43,6 +43,7 @@ public class PlayerGrab : MonoBehaviour
     {
         if (other.CompareTag("Box"))
         {
+            Debug.Log("Tornero");
             Box = false;
         }
     }

@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
     public LayerMask WhatIsGround;
     public bool isGrouded;
 
-    [Header("Test")]
+    [Header("Grab")]
     public PlayerGrab pg;
 
     //public bool Jump = false; //MI SERVE IL TRU E FALSE PER PROCCARE LA ROTAZIONE DEL PG DURANTE IL SALTO
