@@ -145,10 +145,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerTransform: {fileID: 8973179946962625751}
-  Object: {fileID: 0}
-  Box: 0
+  Object1: {fileID: 0}
   Thrust: 1
   rotation: 1
+  Object2: {fileID: 0}
+  Box2: 0
+  Box1: 0
+  PlayerArms: {fileID: 0}
 --- !u!1 &8973179946962625744
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +193,6 @@ GameObject:
   - component: {fileID: 8973179948128051069}
   - component: {fileID: 8973179948128051070}
   - component: {fileID: 8973179948128051071}
-  - component: {fileID: 8973179948128051064}
   - component: {fileID: 8973179948128051075}
   - component: {fileID: 8973179948128051068}
   m_Layer: 0
@@ -266,20 +268,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &8973179948128051064
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8973179948128051066}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!143 &8973179948128051075
 CharacterController:
   m_ObjectHideFlags: 0

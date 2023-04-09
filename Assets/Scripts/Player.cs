@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System;
 
 public class Player : MonoBehaviour
 {
@@ -19,6 +21,7 @@ public class Player : MonoBehaviour
     public float SprintBoost = 0;
     public float WalkSpeed = 0;
     public bool Sprint = false;
+    public AudioSource Heart;
 
     [Header("Gravity")]
     public float gravity = -7.5f;
@@ -33,14 +36,27 @@ public class Player : MonoBehaviour
     public LayerMask WhatIsGround;
     public bool isGrouded;
 
+    //test
+    //public LayerMask WhatIsHole;
+    //public bool isHole;
+    
     [Header("Grab")]
     public PlayerGrab pg;
+
+    //test
+    //[SerializeField] private GameObject StartingSceneTransition;
+    //[SerializeField] private GameObject EndingSceneTransition;
+
 
     //public bool Jump = false; //MI SERVE IL TRU E FALSE PER PROCCARE LA ROTAZIONE DEL PG DURANTE IL SALTO
     //private Vector3 playerVelocity;
     //public float jumpHeight = 10f;
     //public float gravityValue = -9.81f;
 
+    //public void Start()
+    //{
+    //    StartingSceneTransition.SetActive(true);
+    //}
 
     public void Update()
     {
@@ -48,6 +64,7 @@ public class Player : MonoBehaviour
         Run();
         Gravity();
         Jump();
+        
     }
 
     private void CameraMove()
@@ -92,6 +109,7 @@ public class Player : MonoBehaviour
         {
             Debug.Log("I'm Speed");
             Sprint = true;
+            Heart.Play();
         }
         else
         {
@@ -104,6 +122,7 @@ public class Player : MonoBehaviour
         if(Input.GetButtonUp("Fire3"))
         {
             Sprint = false;
+            Heart.Stop();
         }
         else
         {
@@ -124,7 +143,7 @@ public class Player : MonoBehaviour
         isGrouded = Physics.CheckSphere(GroundCheck.position, GroundRadius, (int)WhatIsGround);
 
         //Jump
-        if (Input.GetButtonDown("Fire2") && isGrouded == true)
+        if(Input.GetButtonDown("Fire2") && isGrouded == true)
         {
             Debug.Log("I Belive I Can Fly");
             FallVelocity.y = JumpForce;
