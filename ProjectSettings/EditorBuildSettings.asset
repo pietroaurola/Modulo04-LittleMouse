@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MenuStart.unity
+    path: Assets/Scenes/Demo/MenuStart.unity
     guid: 5b33045bd9bed1641becb884461ad0d3
   - enabled: 1
-    path: Assets/Scenes/Seminterrato.unity
+    path: Assets/Scenes/Demo/Seminterrato.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/PianoTerra.unity
+    path: Assets/Scenes/Demo/PianoTerra.unity
     guid: f4b75e296867ead4fba36c68ea3c2b82
   - enabled: 1
-    path: Assets/Scenes/EndScene.unity
+    path: Assets/Scenes/Demo/EndScene.unity
     guid: 88db2667a94220e49bf175d9a2ffeea6
   m_configObjects: {}
