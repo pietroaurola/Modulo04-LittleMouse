@@ -1,0 +1,9 @@
+-creare script bocca che si apre
+-creare script spostare box oggetto colpisce porta e trancia mano 
+-creare script/trigger mano che insegue
+-creare script/animazioni oggetti che si muovono
+
+-implementare grab
+-implementare porte che si aprono
+
+-modifiacre colore oggetti che si possono saltare

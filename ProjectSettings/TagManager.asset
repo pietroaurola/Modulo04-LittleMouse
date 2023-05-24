@@ -10,6 +10,8 @@ TagManager:
   - Box2
   - Hole
   - Enemy
+  - STOPALL
+  - MOVEALL
   layers:
   - Default
   - TransparentFX
