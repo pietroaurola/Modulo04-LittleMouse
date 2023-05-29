@@ -6115,7 +6115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingSpeed: 1
-  velocity: 0.01
+  velocity: 0.001
 --- !u!4 &1167589136
 Transform:
   m_ObjectHideFlags: 0
